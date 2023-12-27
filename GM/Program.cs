@@ -13,7 +13,7 @@ namespace GM
             // console.writeline hello mouad;
 
             // hello from ilyiss
-            // hello from ilyess
+            // hello frombgh ilyess
 
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             ApplicationConfiguration.Initialize();
