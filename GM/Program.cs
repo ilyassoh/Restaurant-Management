@@ -12,7 +12,7 @@ namespace GM
             // see https://aka.ms/applicationconfiguration.
             // console.writeline hello mouad;
 
-            // hello from ilyass
+            // hello from ilyess
 
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             ApplicationConfiguration.Initialize();
