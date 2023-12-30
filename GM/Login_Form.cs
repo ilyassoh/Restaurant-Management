@@ -6,5 +6,10 @@ namespace GM
         {
             InitializeComponent();
         }
+
+        private void Login_Form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
