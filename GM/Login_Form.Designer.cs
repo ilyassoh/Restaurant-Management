@@ -1,4 +1,5 @@
-﻿namespace GM
+﻿
+namespace GM
 {
     partial class Login_Form
     {
@@ -28,54 +29,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            button1 = new Button();
+            textUser = new TextBox();
+            textPass = new TextBox();
+            buttonLogin = new Button();
             button2 = new Button();
+            label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
-            // textBox1
+            // textUser
             // 
-            textBox1.Location = new Point(235, 199);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(200, 39);
-            textBox1.TabIndex = 0;
+            textUser.Location = new Point(235, 199);
+            textUser.Name = "textUser";
+            textUser.Size = new Size(200, 39);
+            textUser.TabIndex = 0;
             // 
-            // textBox2
+            // textPass
             // 
-            textBox2.Location = new Point(235, 373);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(200, 39);
-            textBox2.TabIndex = 1;
+            textPass.Location = new Point(235, 373);
+            textPass.Name = "textPass";
+            textPass.Size = new Size(200, 39);
+            textPass.TabIndex = 1;
             // 
-            // button1
+            // buttonLogin
             // 
-            button1.Location = new Point(272, 552);
-            button1.Name = "button1";
-            button1.Size = new Size(150, 46);
-            button1.TabIndex = 2;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            buttonLogin.Location = new Point(259, 561);
+            buttonLogin.Name = "buttonLogin";
+            buttonLogin.Size = new Size(150, 46);
+            buttonLogin.TabIndex = 2;
+            buttonLogin.Text = "Login";
+            buttonLogin.UseVisualStyleBackColor = true;
+            buttonLogin.Click += buttonLogin_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(272, 656);
+            button2.Location = new Point(259, 640);
             button2.Name = "button2";
             button2.Size = new Size(150, 46);
             button2.TabIndex = 3;
-            button2.Text = "button2";
+            button2.Text = "Exit";
             button2.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(233, 161);
+            label1.Name = "label1";
+            label1.Size = new Size(78, 32);
+            label1.TabIndex = 4;
+            label1.Text = "label1";
+            label1.Click += label1_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(240, 333);
+            label2.Name = "label2";
+            label2.Size = new Size(78, 32);
+            label2.TabIndex = 5;
+            label2.Text = "label2";
             // 
             // Login_Form
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(701, 890);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Margin = new Padding(5, 5, 5, 5);
+            Controls.Add(buttonLogin);
+            Controls.Add(textPass);
+            Controls.Add(textUser);
+            Margin = new Padding(5);
             Name = "Login_Form";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
@@ -84,11 +109,18 @@
             PerformLayout();
         }
 
+        //# private void label1_Click(object sender, EventArgs e)
+        //#{
+        //# throw new NotImplementedException();
+        //#   }
+
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Button button1;
+        private TextBox textUser;
+        private TextBox textPass;
+        private Button buttonLogin;
         private Button button2;
+        private Label label1;
+        private Label label2;
     }
 }
