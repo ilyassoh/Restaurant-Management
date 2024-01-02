@@ -29,82 +29,114 @@ namespace GM
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Form));
             textUser = new TextBox();
             textPass = new TextBox();
             buttonLogin = new Button();
-            button2 = new Button();
-            label1 = new Label();
-            label2 = new Label();
+            buttonExit = new Button();
+            username = new Label();
+            password = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // textUser
             // 
-            textUser.Location = new Point(235, 199);
+            textUser.BorderStyle = BorderStyle.None;
+            textUser.Location = new Point(85, 258);
+            textUser.Margin = new Padding(2);
+            textUser.Multiline = true;
             textUser.Name = "textUser";
-            textUser.Size = new Size(200, 39);
+            textUser.Size = new Size(252, 40);
             textUser.TabIndex = 0;
+            textUser.TextChanged += textUser_TextChanged;
             // 
             // textPass
             // 
-            textPass.Location = new Point(235, 373);
+            textPass.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textPass.BorderStyle = BorderStyle.None;
+            textPass.Location = new Point(85, 348);
+            textPass.Margin = new Padding(2);
+            textPass.Multiline = true;
             textPass.Name = "textPass";
-            textPass.Size = new Size(200, 39);
+            textPass.Size = new Size(252, 48);
             textPass.TabIndex = 1;
             // 
             // buttonLogin
             // 
-            buttonLogin.Location = new Point(259, 561);
+            buttonLogin.BackColor = Color.Gold;
+            buttonLogin.Location = new Point(85, 466);
+            buttonLogin.Margin = new Padding(2);
             buttonLogin.Name = "buttonLogin";
-            buttonLogin.Size = new Size(150, 46);
+            buttonLogin.Size = new Size(99, 44);
             buttonLogin.TabIndex = 2;
             buttonLogin.Text = "Login";
-            buttonLogin.UseVisualStyleBackColor = true;
+            buttonLogin.UseVisualStyleBackColor = false;
             buttonLogin.Click += buttonLogin_Click;
             // 
-            // button2
+            // buttonExit
             // 
-            button2.Location = new Point(259, 640);
-            button2.Name = "button2";
-            button2.Size = new Size(150, 46);
-            button2.TabIndex = 3;
-            button2.Text = "Exit";
-            button2.UseVisualStyleBackColor = true;
+            buttonExit.BackColor = Color.Gold;
+            buttonExit.Location = new Point(245, 466);
+            buttonExit.Margin = new Padding(2);
+            buttonExit.Name = "buttonExit";
+            buttonExit.Size = new Size(92, 44);
+            buttonExit.TabIndex = 3;
+            buttonExit.Text = "Exit";
+            buttonExit.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // username
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(233, 161);
-            label1.Name = "label1";
-            label1.Size = new Size(78, 32);
-            label1.TabIndex = 4;
-            label1.Text = "label1";
-            label1.Click += label1_Click;
+            username.AutoSize = true;
+            username.Location = new Point(85, 226);
+            username.Margin = new Padding(2, 0, 2, 0);
+            username.Name = "username";
+            username.Size = new Size(75, 20);
+            username.TabIndex = 4;
+            username.Text = "Username";
+            username.Click += label1_Click;
             // 
-            // label2
+            // password
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(240, 333);
-            label2.Name = "label2";
-            label2.Size = new Size(78, 32);
-            label2.TabIndex = 5;
-            label2.Text = "label2";
+            password.AutoSize = true;
+            password.Location = new Point(85, 317);
+            password.Margin = new Padding(2, 0, 2, 0);
+            password.Name = "password";
+            password.Size = new Size(70, 20);
+            password.TabIndex = 5;
+            password.Text = "Password";
+            password.Click += label2_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.InitialImage = (Image)resources.GetObject("pictureBox1.InitialImage");
+            pictureBox1.Location = new Point(117, 24);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(192, 137);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
             // 
             // Login_Form
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(701, 890);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(button2);
+            BackColor = SystemColors.ControlLight;
+            ClientSize = new Size(431, 556);
+            Controls.Add(pictureBox1);
+            Controls.Add(password);
+            Controls.Add(username);
+            Controls.Add(buttonExit);
             Controls.Add(buttonLogin);
             Controls.Add(textPass);
             Controls.Add(textUser);
-            Margin = new Padding(5);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Login_Form";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             Load += Login_Form_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -119,8 +151,9 @@ namespace GM
         private TextBox textUser;
         private TextBox textPass;
         private Button buttonLogin;
-        private Button button2;
-        private Label label1;
-        private Label label2;
+        private Button buttonExit;
+        private Label username;
+        private Label password;
+        private PictureBox pictureBox1;
     }
 }

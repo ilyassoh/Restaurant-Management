@@ -19,17 +19,17 @@ namespace GM
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            if (test.IsValide(textUser.Text, textPass.Text) == false)
-            {
-                MessageBox.Show("Invalid username or password");
-            }
-            else
-            {
-                MessageBox.Show("Welcome");
-                this.Hide();
-                Form1 f = new Form1();
-                f.Show();
-            }
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textUser_TextChanged(object sender, EventArgs e)
+        {
+            sqlconnection = ;
         }
     }
 }
