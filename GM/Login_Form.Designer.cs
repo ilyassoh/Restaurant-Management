@@ -47,7 +47,7 @@ namespace GM
             textUser.Margin = new Padding(2);
             textUser.Multiline = true;
             textUser.Name = "textUser";
-            textUser.Size = new Size(252, 40);
+            textUser.Size = new Size(252, 28);
             textUser.TabIndex = 0;
             textUser.TextChanged += textUser_TextChanged;
             // 
@@ -59,7 +59,7 @@ namespace GM
             textPass.Margin = new Padding(2);
             textPass.Multiline = true;
             textPass.Name = "textPass";
-            textPass.Size = new Size(252, 48);
+            textPass.Size = new Size(252, 28);
             textPass.TabIndex = 1;
             // 
             // buttonLogin

@@ -19,7 +19,7 @@ namespace GM
         {
             bool IsValid = false;
 
-            string query = @"Select * from users username ='" + user + "' and upass ='" + pass + "'";
+            string query = @"Select * from users where username ='" + user + "' and upass ='" + pass + "'";
 
             SqlCommand cmd = new SqlCommand(query, con);
             DataTable dt = new DataTable();
